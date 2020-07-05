@@ -468,19 +468,19 @@ regardless of the input values.
 This violates another important rule of programming:
 *always initialize from data*.
 
-> ## Pre- and Post-Conditions
+> ## Pré e Pós Condições
 >
-> Suppose you are writing a function called `average` that calculates
-> the average of the numbers in a list.
-> What pre-conditions and post-conditions would you write for it?
-> Compare your answer to your neighbor's:
-> can you think of a function that will pass your tests but not his/hers or vice versa?
+> Imagine que está escrevendo uma função chamada `average` que calcula
+> a média de números em uma lista.
+> Quais pré-condições e pós-condições poderiam ser escritas para essa função?
+> Compare sua resposta com sua colega:
+> você pode pensar em uma função que irá passar em seu teste, mas não no dela e vice-e-versa?
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
-> > # a possible pre-condition:
+> > # uma pré-condição possível :
 > > assert len(input_list) > 0, 'List length must be non-zero'
-> > # a possible post-condition:
+> > # uma pós-condição possível:
 > > assert numpy.min(input_list) <= average <= numpy.max(input_list),
 > > 'Average should be between min and max of input values (inclusive)'
 > > ~~~
@@ -488,10 +488,10 @@ This violates another important rule of programming:
 > {: .solution}
 {: .challenge}
 
-> ## Testing Assertions
+> ## Testando Declarações
 >
-> Given a sequence of a number of cars, the function `get_total_cars` returns
-> the total number of cars.
+> Dada uma sequência de números de carros, a função `get_total_cars` retorna
+> o número total de carros.
 >
 > ~~~
 > get_total_cars([1, 2, 3, 4])
@@ -513,9 +513,9 @@ This violates another important rule of programming:
 > ~~~
 > {: .output}
 >
-> Explain in words what the assertions in this function check,
-> and for each one,
-> give an example of input that will make that assertion fail.
+> Explique o que as declarações nessa função verificam,
+> e para cada uma
+> dê um exemplo de input (entrada) que irá fazer a declaração falhar.
 >
 > ~~~
 > def get_total(values):
@@ -529,13 +529,13 @@ This violates another important rule of programming:
 > ~~~
 > {: .language-python}
 >
-> > ## Solution
-> > *   The first assertion checks that the input sequence `values` is not empty.
-> >     An empty sequence such as `[]` will make it fail.
-> > *   The second assertion checks that each value in the list can be turned into an integer.
-> >     Input such as `[1, 2,'c', 3]` will make it fail.
-> > *   The third assertion checks that the total of the list is greater than 0.
-> >     Input such as `[-10, 2, 3]` will make it fail.
+> > ## Resposta
+> > *   A primeira declaração verifica se a sequência de input `values` não está vazia.
+> >     Uma sequência vazia como `[]` irá fazer a função falhar.
+> > *   A segunda declaração verifica se cada valor na lista foi convertido para `integer` (inteiro).
+> >     Input como `[1, 2,'c', 3]` irá fazer a função falhar.
+> > *   A terceira declaração verifica se o total da lista é maior que 0.
+> >     Input como `[-10, 2, 3]` irá fazer a função falhar.
 > {: .solution}
 {: .challenge}
 

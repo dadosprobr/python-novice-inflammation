@@ -432,19 +432,19 @@ If you get an error that you've never seen before,
 searching the Internet for that error type
 often reveals common reasons why you might get that error.
 
-> ## Reading Error Messages
+> ## Lendo Mensagens de Erro
 >
-> Read the Python code and the resulting traceback below, and answer the following questions:
+> Leia o código Python e o `traceback` (situação da pilha de execução) resultante abaixo, e responda as seguintes questões:
 >
-> 1.  How many levels does the traceback have?
-> 2.  What is the function name where the error occurred?
-> 3.  On which line number in this function did the error occur?
-> 4.  What is the type of error?
-> 5.  What is the error message?
+> 1.  Quantos níveis o `traceback` possui?
+> 2.  Qual o nome da função onde o erro ocorreu?
+> 3.  Qual número da linha dessa função em que o erro ocorreu?
+> 4.  Qual o tipo de erro?
+> 5.  Qual a mensagem de erro?
 >
 > ~~~
-> # This code has an intentional error. Do not type it directly;
-> # use it for reference to understand the error message below.
+> # Esse código tem um erro intencional. Não o escreva diretamente;
+> # o use para referência para entender a mensagem de erro abaixo.
 > def print_message(day):
 >     messages = {
 >         "monday": "Hello, world!",
@@ -490,21 +490,21 @@ often reveals common reasons why you might get that error.
 > ~~~
 > {: .error}
 >
-> > ## Solution
-> > 1. 3 levels
+> > ## Resposta
+> > 1. Três níveis
 > > 2. `print_message`
 > > 3. 11
 > > 4. `KeyError`
-> > 5. There isn't really a message; you're supposed to infer that `Friday` is not a key in `messages`.
+> > 5. Não há uma mensagem; deve-se inferir que `Friday` não é uma chave em `messages`.
 > {: .solution}
 {: .challenge}
 
-> ## Identifying Syntax Errors
+> ## Identificando um Erro de Sintaxe
 >
-> 1. Read the code below, and (without running it) try to identify what the errors are.
-> 2. Run the code, and read the error message. Is it a `SyntaxError` or an `IndentationError`?
-> 3. Fix the error.
-> 4. Repeat steps 2 and 3, until you have fixed all the errors.
+> 1. Leia o código abaixo, e (sem executá-lo) tente identificar quais são os erros.
+> 2. Executar o código, e ler a mensagem de erro. É um `SyntaxError` ou um `IndentationError`?
+> 3. Conserte o erro.
+> 4. Repita os passos 2 e 3, até que todos os erros sejam eliminados.
 >
 > ~~~
 > def another_function
@@ -514,10 +514,10 @@ often reveals common reasons why you might get that error.
 > ~~~
 > {: .language-python}
 >
-> > ## Solution
-> > `SyntaxError` for missing `():` at end of first line,
-> `IndentationError` for mismatch between second and third lines.
-> > A fixed version is:
+> > ## Resposta
+> > `SyntaxError` para ausência de `():` ao fim da primeira linha,
+> `IndentationError` por incompatibilidade entre a segunda e terceira linhas.
+> > Uma versão corrigida seria:
 > >
 > > ~~~
 > > def another_function():
@@ -529,16 +529,16 @@ often reveals common reasons why you might get that error.
 > {: .solution}
 {: .challenge}
 
-> ## Identifying Variable Name Errors
+> ## Identificando Erros nos Nomes de Variáveis
 >
-> 1. Read the code below, and (without running it) try to identify what the errors are.
-> 2. Run the code, and read the error message.
->    What type of `NameError` do you think this is?
->    In other words, is it a string with no quotes,
->    a misspelled variable,
->    or a variable that should have been defined but was not?
-> 3. Fix the error.
-> 4. Repeat steps 2 and 3, until you have fixed all the errors.
+> 1. Leia o código abaixo, e (sem executá-lo) tente identificar quais são os erros.
+> 2. Execute o código e leia a mensagem de erro.
+>    Qual o tipo de `NameError` é?
+>    Em outras palavras: é uma `string` sem aspas,
+>    uma variável com erros ortográficos,
+>    ou uma variável que deveria ter sido definida, mas não foi?
+> 3. Conserte o erro.
+> 4. Repita os passos 2 e 3, até que todos os erros sejam eliminados.
 >
 > ~~~
 > for number in range(10):
@@ -551,11 +551,11 @@ often reveals common reasons why you might get that error.
 > ~~~
 > {: .language-python}
 >
-> > ## Solution
-> > 3 `NameError`s for `number` being misspelled, for `message` not defined,
-> > and for `a` not being in quotes.
+> > ## Resposta
+> > São três erros do tipo `NameError`: para `number` com erro ortográfico, para `message` não definida,
+> > e para `a` por não estar entre aspas.
 > >
-> > Fixed version:
+> > Uma versão corrigida seria:
 > >
 > > ~~~
 > > message = ""
@@ -571,11 +571,11 @@ often reveals common reasons why you might get that error.
 > {: .solution}
 {: .challenge}
 
-> ## Identifying Index Errors
+> ## Identificando Erros de índice
 >
-> 1. Read the code below, and (without running it) try to identify what the errors are.
-> 2. Run the code, and read the error message. What type of error is it?
-> 3. Fix the error.
+> 1. Leia o código abaixo, e (sem executá-lo) tente identificar quais são os erros.
+> 2. Execute o código, e leia a mensagem de erro. Qual é o tipo de erro?
+> 3. Conserte o erro.
 >
 > ~~~
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
@@ -583,9 +583,9 @@ often reveals common reasons why you might get that error.
 > ~~~
 > {: .language-python}
 >
-> > ## Solution
-> > `IndexError`; the last entry is `seasons[3]`, so `seasons[4]` doesn't make sense.
-> > A fixed version is:
+> > ## Resposta
+> > `IndexError`; a última entrada é `seasons[3]`, então `seasons[4]` não faz sentido.
+> > Uma versão corrigida seria:
 > >
 > > ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']

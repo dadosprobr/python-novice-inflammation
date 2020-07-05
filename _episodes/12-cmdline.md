@@ -664,9 +664,9 @@ In fact,
 that's done:
 the program now does everything we set out to do.
 
-> ## Arithmetic on the Command Line
+> ## Aritmética na Linha de Comando 
 >
-> Write a command-line program that does addition and subtraction:
+> Escreva um programa em linha de comando que faça adição e subtração:
 >
 > ~~~
 > $ python arith.py add 1 2
@@ -688,7 +688,7 @@ the program now does everything we set out to do.
 > ~~~
 > {: .output}
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > import sys
 > >
@@ -724,12 +724,12 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## Finding Particular Files
+> ## Encontrando Arquivos Específicos 
 >
-> Using the `glob` module introduced [earlier]({{ page.root }}/04-files/),
-> write a simple version of `ls` that shows files in the current directory
-> with a particular suffix.
-> A call to this script should look like this:
+> Usando o módulo `glob` introduzido [anteriormente](https://dadosprobr.github.io/python-novice-inflammation/06-files/index.html),
+> escreva uma versão simples de `ls` que mostre os arquivos do diretório atual
+> com um sufixo em particular.
+> Uma chamada desse script deve ser semelhante a:
 >
 > ~~~
 > $ python my_ls.py py
@@ -743,7 +743,7 @@ the program now does everything we set out to do.
 > ~~~
 > {: .output}
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > import sys
 > > import glob
@@ -764,14 +764,14 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## Changing Flags
+> ## Mudando _Flags_
 >
-> Rewrite `readings.py` so that it uses `-n`, `-m`, and `-x`
-> instead of `--min`, `--mean`, and `--max` respectively.
-> Is the code easier to read?
-> Is the program easier to understand?
+> Reescreva `readings.py` para que use `-n`, `-m`, e `-x`
+> ao invés de `--min`, `--mean`, e `--max`, respectivamente.
+> Esse código é mais fácil de ler?
+> Esse programa é mais fácil de entender?
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > # this is code/readings_07.py
 > > import sys
@@ -808,14 +808,14 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## Adding a Help Message
+> ## Adicionando uma Mensagem de Ajuda
 >
-> Separately,
-> modify `readings.py` so that if no parameters are given
-> (i.e., no action is specified and no filenames are given),
-> it prints a message explaining how it should be used.
+> Separadamente,
+> modifique `readings.py` para que se não for dado nenhum parâmetro
+> (i.e., nenhuma ação é especificada e nenhum nome de arquivo for fornecido),
+> exiba uma mensagem explicando como deve ser usado.
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > # this is code/readings_08.py
 > > import sys
@@ -859,13 +859,13 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## Adding a Default Action
+> ## Adicionando uma Ação Padrão
 >
-> Separately,
-> modify `readings.py` so that if no action is given
-> it displays the means of the data.
+> Separadamente,
+> modifique `readings.py` para que exiba a média dos dados
+> se nenhuma ação for fornecida.
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > # this is code/readings_09.py
 > > import sys
@@ -905,14 +905,14 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## A File-Checker
+> ## Verificador de Arquivo
 >
-> Write a program called `check.py` that takes the names of one or more
-> inflammation data files as arguments
-> and checks that all the files have the same number of rows and columns.
-> What is the best way to test your program?
+> Escreva um programa chamado `check.py` que receba como argumento o nome de um 
+> ou mais arquivos com dados de inflamação 
+> e verifique se todos os arquivos possuem o mesmo número de linhas e colunas.
+> Qual a melhor forma de testar seu programa?
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > import sys
 > > import numpy
@@ -949,15 +949,15 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## Counting Lines
+> ## Contando Linhas
 >
-> Write a program called `line_count.py` that works like the Unix `wc` command:
+> Escreva um programa chamado `line_count.py` que funcione como o comando _Unix_ `wc`:
 >
-> *   If no filenames are given, it reports the number of lines in standard input.
-> *   If one or more filenames are given, it reports the number of lines in each,
->     followed by the total number of lines.
+> *   Se nenhum nome de arquivo é dado, exibe o número de linhas do _input_ padrão.
+> *   Se um ou mais nomes de arquivo são dados, exibe o número de linha em cada,
+>     seguido pelo número total de linhas.
 >
-> > ## Solution
+> > ## Resposta
 > > ~~~
 > > import sys
 > >
@@ -998,11 +998,11 @@ the program now does everything we set out to do.
 > {: .solution}
 {: .challenge}
 
-> ## Generate an Error Message
+> ## Gerar uma Mensagem de Erro
 >
-> Write a program called `check_arguments.py` that prints usage
-> then exits the program if no arguments are provided.
-> (Hint: You can use `sys.exit()` to exit the program.)
+> Escreva um programa chamado `check_arguments.py` que exiba sua forma de uso e
+> em seguida finalize o programa se nenhum argumento é fornecido.
+> (Dica: Você pode usar `sys.exit()` para finalizar o programa.)
 >
 > ~~~
 > $ python check_arguments.py
