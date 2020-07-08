@@ -237,26 +237,26 @@ and to turn every assumption (or mistake) into an assertion,
 it will actually take us *less* time to produce working programs,
 not more.
 
-> ## Debug With a Neighbor
+> ## Depurar com um vizinho
 >
-> Take a function that you have written today, and introduce a tricky bug.
-> Your function should still run, but will give the wrong output.
-> Switch seats with your neighbor and attempt to debug
-> the bug that they introduced into their function.
-> Which of the principles discussed above did you find helpful?
+> Pegue uma função que você escreveu hoje e introduza um bug complicado.
+> Sua função deve ser executada, mas fornecer a saída errada.
+> Troque de assento com seu vizinho e tente depurar
+> o bug que ele introduziu na função dele.
+> Quais dos princípios discutidos acima foram úteis pra você?
 {: .challenge}
 
-> ## Not Supposed to be the Same
+> ## Não deveria ser o mesmo
 >
-> You are assisting a researcher with Python code that computes the
-> Body Mass Index (BMI) of patients.  The researcher is concerned because
-> all patients seemingly have unusual and identical BMIs, despite having different
-> physiques.  BMI is calculated as **weight in kilograms**
-> divided by the square of **height in metres**.
+> Você está ajudando um pesquisador em um código Python que calcula o
+> Índice de Massa Corporal (IMC) dos pacientes.  O pesquisador está preocupado porque
+> todos os pacientes aparentemente têm IMCs incomuns e idênticos, apesar de serem fisicamente
+> diferentes.  O IMC é calculado como **peso em quilogramas**
+> dividido pelo quadrado da **altura em metros**.
 >
-> Use the debugging principles in this exercise and locate problems
-> with the code. What suggestions would you give the researcher for
-> ensuring any later changes they make work correctly?
+> Use os princípios de depuração deste exercício e localize os problemas
+> no código. Que sugestões você daria ao pesquisador para garantir que
+> as alterações posteriores sejam feitas corretamente?
 >
 > ~~~
 > patients = [[70, 1.8], [80, 1.9], [150, 1.7]]
@@ -278,12 +278,12 @@ not more.
 > ~~~
 > {: .output}
 >
-> > ## Solution
-> > * The loop is not being utilised correctly. `height` and `weight` are always
-> >   set as the first patient's data during each iteration of the loop.
+> > ## Solução
+> > * O loop não está sendo utilizado corretamente. `height(altura)` e `weight(peso)` são sempre
+> >   definidos com os dados do primeiro paciente durante cada iteração do loop.
 > >
-> > * The height/weight variables are reversed in the function call to
-> >   `calculate_bmi(...)`, the correct BMIs are 21.604938, 22.160665 and 51.903114.
+> > * As variáveis ​​altura/peso são revertidas na chamada de função para
+> >   `calculate_bmi(...)`, os IMCs corretos são 21.604938, 22.160665 e 51.903114.
 > {: .solution}
 {: .challenge}
 

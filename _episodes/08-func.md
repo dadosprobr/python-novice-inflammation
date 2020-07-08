@@ -647,13 +647,13 @@ programmer. If you need to revisit code that you wrote months ago and
 haven't thought about since then, you will appreciate the value of
 readable code!
 
-> ## Combining Strings
+> ## Combinando Strings
 >
-> "Adding" two strings produces their concatenation:
-> `'a' + 'b'` is `'ab'`.
-> Write a function called `fence` that takes two parameters called `original` and `wrapper`
-> and returns a new string that has the wrapper character at the beginning and end of the original.
-> A call to your function should look like this:
+> "Adicionar" duas strings produz sua concatenação:
+> `'a' + 'b'` é `'ab'`.
+> Escreva uma função chamada `fence` que use dois parâmetros chamados `original` e `wrapper`
+> e retorne uma nova string que contenha os caracteres de wrapper no início e no fim do original.
+> A chamada da sua função deve ser assim:
 >
 > ~~~
 > print(fence('name', '*'))
@@ -665,7 +665,7 @@ readable code!
 > ~~~
 > {: .output}
 >
-> > ## Solution
+> > ## Solução
 > > ~~~
 > > def fence(original, wrapper):
 > >     return wrapper + original + wrapper
@@ -676,11 +676,11 @@ readable code!
 
 > ## Return versus print
 >
-> Note that `return` and `print` are not interchangeable.
-> `print` is a Python function that *prints* data to the screen.
-> It enables us, *users*, see the data.
-> `return` statement, on the other hand, makes data visible to the program.
-> Let's have a look at the following function:
+> Note que `return` e `print` não são intercambiáveis.
+> `print` é uma função Python que *exibe* dados na tela.
+> Permite que nós, *usuários*, vejamos os dados.
+> A instrução `return`, por outro lado, torna os dados visíveis ao programa.
+> Vamos dar uma olhada na seguinte função:
 >
 > ~~~
 > def add(a, b):
@@ -688,19 +688,19 @@ readable code!
 > ~~~
 > {: .language-python}
 >
-> **Question**: What will we see if we execute the following commands?
+> **Pergunta**: O que veremos se executarmos os seguintes comandos??
 > ~~~
 > A = add(7, 3)
 > print(A)
 > ~~~
 > {: .language-python}
 >
-> > ## Solution
-> > Python will first execute the function `add` with `a = 7` and `b = 3`,
-> > and, therefore, print `10`. However, because function `add` does not have a
-> > line that starts with `return` (no `return` "statement"), it will, by default, return
-> > nothing which, in Python world, is called `None`. Therefore, `A` will be assigned to `None`
-> > and the last line (`print(A)`) will print `None`. As a result, we will see:
+> > ## Solução
+> > O Python executará primeiro a função `add` com `a = 7` e `b = 3`,
+> > e então, exibirá `10`. No entanto, como a função `add` não tem uma
+> > linha que se inicia com `return` (sem "instrução" `return`), ela irá, por padrão, retornar
+> > nada, que, no mundo Python, é chamado `None`. Portanto, `A` será atribuído a `None`
+> > e a última linha (`print(A)`) exibirá `None`. Como resultado, veremos:
 > > ~~~
 > > 10
 > > None
@@ -709,14 +709,14 @@ readable code!
 > {: .solution}
 {: .challenge}
 
-> ## Selecting Characters From Strings
+> ## Selecionando Caracteres de Strings
 >
-> If the variable `s` refers to a string,
-> then `s[0]` is the string's first character
-> and `s[-1]` is its last.
-> Write a function called `outer`
-> that returns a string made up of just the first and last characters of its input.
-> A call to your function should look like this:
+> Se a variável `s` se referir a uma string,
+> então `s[0]` é o primeiro caractere da string
+> e `s[-1]` é o último.
+> Escreva uma função chamada `outer`
+> que retorne uma string composta apenas pelo primeiro e último caractere de sua entrada.
+> A chamada da sua função deve ser assim:
 >
 > ~~~
 > print(outer('helium'))
@@ -728,7 +728,7 @@ readable code!
 > ~~~
 > {: .output}
 >
-> > ## Solution
+> > ## Solução
 > > ~~~
 > > def outer(input_string):
 > >     return input_string[0] + input_string[-1]
@@ -737,14 +737,14 @@ readable code!
 > {: .solution}
 {: .challenge}
 
-> ## Rescaling an Array
+> ## Normalizando um Array
 >
-> Write a function `rescale` that takes an array as input
-> and returns a corresponding array of values scaled to lie in the range 0.0 to 1.0.
-> (Hint: If `L` and `H` are the lowest and highest values in the original array,
-> then the replacement for a value `v` should be `(v-L) / (H-L)`.)
+> Escreva uma função chamada `rescale` que receba um array de entrada
+> e retorne um array correspondente de valores dimensionados dentro do intervalo 0.0 e 1.0.
+> (Dica: Se `L` e `H` são os valores mais baixo e mais alto no array original,
+> então a substituição por um valor `v` deve ser `(v-L) / (H-L)`.)
 >
-> > ## Solution
+> > ## Solução
 > > ~~~
 > > def rescale(input_array):
 > >     L = numpy.min(input_array)
@@ -756,20 +756,21 @@ readable code!
 > {: .solution}
 {: .challenge}
 
-> ## Testing and Documenting Your Function
+> ## Testando e Documentando Sua Função
 >
-> Run the commands `help(numpy.arange)` and `help(numpy.linspace)`
-> to see how to use these functions to generate regularly-spaced values,
-> then use those values to test your `rescale` function.
-> Once you've successfully tested your function,
-> add a docstring that explains what it does.
+> Execute os comandos `help(numpy.arange)` e `help(numpy.linspace)`
+> para ver como usar essas funções para gerar valores regularmente espaçados,
+> então use esses valores para testar sua função `rescale`.
+> Quando você tiver testado com êxito sua função,
+> adicione uma docstring que explique o que ela faz.
 >
-> > ## Solution
+> > ## Solução
 > > ~~~
-> > '''Takes an array as input, and returns a corresponding array scaled so
-> > that 0 corresponds to the minimum and 1 to the maximum value of the input array.
+> > '''Recebe um array como entrada e retorna um array correspondente
+> > dimensionado para que 0 corresponda ao valor mínimo e 1 ao
+> > valor máximo do array de entrada.
 > >
-> > Examples:
+> > Exemplo:
 > > >>> rescale(numpy.arange(10.0))
 > > array([ 0.        ,  0.11111111,  0.22222222,  0.33333333,  0.44444444,
 > >        0.55555556,  0.66666667,  0.77777778,  0.88888889,  1.        ])
@@ -781,14 +782,14 @@ readable code!
 > {: .solution}
 {: .challenge}
 
-> ## Defining Defaults
+> ## Definindo Padrões
 >
-> Rewrite the `rescale` function so that it scales data to lie between `0.0` and `1.0` by default,
-> but will allow the caller to specify lower and upper bounds if they want.
-> Compare your implementation to your neighbor's:
-> do the two functions always behave the same way?
+> Reescreva a função `rescale` para que ela dimensione os dados para ficar entre `0.0` e `1.0` por
+> padrão, mas que permita que o chamador especifique o limite inferior e superior, se desejar.
+> Compare sua implementação com a de seu vizinho:
+> As duas funções sempre se comportam da mesma maneira?
 >
-> > ## Solution
+> > ## Solução
 > > ~~~
 > > def rescale(input_array, low_val=0.0, high_val=1.0):
 > >     '''rescales input array values to lie between low_val and high_val'''
@@ -802,9 +803,9 @@ readable code!
 > {: .solution}
 {: .challenge}
 
-> ## Variables Inside and Outside Functions
+> ## Variáveis Internas e Externas da Função
 >
-> What does the following piece of code display when run --- and why?
+> O que o seguinte trecho de código exibe quanto executado --- e por quê?
 >
 > ~~~
 > f = 0
@@ -822,7 +823,7 @@ readable code!
 > ~~~
 > {: .language-python}
 >
-> > ## Solution
+> > ## Solução
 > >
 > > ~~~
 > > 259.81666666666666
@@ -831,14 +832,14 @@ readable code!
 > > 0
 > > ~~~
 > > {: .output}
-> > `k` is 0 because the `k` inside the function `f2k` doesn't know
-> > about the `k` defined outside the function.
+> > `k` é 0 porque o `k` interno da função `f2k` não conhece
+> > o valor de `k` definido fora da função.
 > {: .solution}
 {: .challenge}
 
-> ## Mixing Default and Non-Default Parameters
+> ## Mesclando parâmetros Padrão e Não-Padrão
 >
-> Given the following code:
+> Dado o seguinte código:
 >
 > ~~~
 > def numbers(one, two=2, three, four=4):
@@ -849,15 +850,15 @@ readable code!
 > ~~~
 > {: .language-python}
 >
-> what do you expect will be printed?  What is actually printed?
-> What rule do you think Python is following?
+> O que você espera que seja exibido? O que é realmente exibido?
+> Que regra você pensa que o Python está seguindo?
 >
 > 1.  `1234`
 > 2.  `one2three4`
 > 3.  `1239`
 > 4.  `SyntaxError`
 >
-> Given that, what does the following piece of code display when run?
+> Dado isso, o que o seguinte trecho de código exibe quando executado?
 >
 > ~~~
 > def func(a, b=3, c=6):
@@ -872,22 +873,22 @@ readable code!
 > 3. `a: -1 b: 2 c: 6`
 > 4. `a: b: -1 c: 2`
 >
-> > ## Solution
-> > Attempting to define the `numbers` function results in `4. SyntaxError`.
-> > The defined parameters `two` and `four` are given default values. Because
-> > `one` and `three` are not given default values, they are required to be
-> > included as arguments when the function is called and must be placed
-> > before any parameters that have default values in the function definition.
+> > ## Solução
+> > Tentar definir a função `numbers` resulta em `4. SyntaxError`.
+> > Os parâmetros definidos `two` e `four` recebem valor padrão. Como
+> > `one` e `three` não recebem valor padrão, eles precisam ser incluídos como
+> > argumentos quando a função é chamada e devem ser colocados
+> > antes de quaisquer parâmetros que tenham valores padrão na definição da função.
 > >
-> > The given call to `func` displays `a: -1 b: 2 c: 6`. -1 is assigned to
-> > the first parameter `a`, 2 is assigned to the next parameter `b`, and `c` is
-> > not passed a value, so it uses its default value 6.
+> > A chamada da função `func` exibe `a: -1 b: 2 c: 6`. -1 é atribuído ao
+> > primeiro parâmetro `a`, 2 é atribuído ao próximo parâmetro `b`, e nenhum
+> > valor é atribuído ao parâmetro `c`, então ele usa seu valor padrão 6.
 > {: .solution}
 {: .challenge}
 
-> ## The Old Switcheroo
+> ## O Velho Troca Troca
 >
-> Consider this code:
+> Considere o código:
 >
 > ~~~
 > a = 3
@@ -904,29 +905,29 @@ readable code!
 > ~~~
 > {: .language-python}
 >
-> Which of the following would be printed if you were to run this code?
-> Why did you pick this answer?
+> Qual das opções a seguir seria exibida se você executasse esse código?
+> Por que você escolheu esta resposta?
 >
 > 1. `7 3`
 > 2. `3 7`
 > 3. `3 3`
 > 4. `7 7`
 >
-> > ## Solution
-> > `3 7` is the correct answer. Initially, `a` has a value of 3 and `b` has a value of 7.
-> > When the `swap` function is called, it creates local variables (also called
-> > `a` and `b` in this case) and trades their values. The function does not
-> > return any values and does not alter `a` or `b` outside of its local copy.
-> > Therefore the original values of `a` and `b` remain unchanged.
+> > ## Solução
+> > `3 7` é a resposta correta. Inicialmente, `a` tem o valor 3 e `b` tem o valor 7.
+> > Quando a função `swap` é chamada, ela cria variáveis locais (também chamadas de
+> > `a` e `b` neste caso) e negocia seus valores. A função não retorna
+> > valor algum e não altera `a` ou `b` de fora da sua cópia local.
+> > Portanto os valores originais de `a` e `b` permanecem inalterados.
 > {: .solution}
 {: .challenge}
 
-> ## Readable Code
+> ## Código Legível
 >
-> Revise a function you wrote for one of the previous exercises to try to make
-> the code more readable. Then, collaborate with one of your neighbors
-> to critique each other's functions and discuss how your function implementations
-> could be further improved to make them more readable.
+> Revise uma função que você escreveu em um dos exercícios anteriores para tentar
+> criar um código mais legível. Em seguida, colabore com um de seus vizinhos
+> para criticar as funções uns dos outros e discutir como suas implementações de
+> funções poderiam ser melhoradas para se tornarem mais legíveis.
 {: .challenge}
 
 {% include links.md %}
