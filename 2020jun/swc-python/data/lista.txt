@@ -1,0 +1,33 @@
+Aula 1.ipynb
+Aula 2.ipynb
+Aula 3.ipynb
+Aula 4.ipynb
+Aula 5.ipynb
+Aula 6.ipynb
+Aula 7.ipynb
+Aula 8.ipynb
+__pycache__
+argv_list.py
+faixas.py
+faixas_test.py
+inflammation-01.csv
+inflammation-02.csv
+inflammation-03.csv
+inflammation-04.csv
+inflammation-05.csv
+inflammation-06.csv
+inflammation-07.csv
+inflammation-08.csv
+inflammation-09.csv
+inflammation-10.csv
+inflammation-11.csv
+inflammation-12.csv
+lista.txt
+pri.py
+readings_01.py
+readings_05.py
+sec.py
+small-01.csv
+small-02.csv
+small-03.csv
+sys_version.py
